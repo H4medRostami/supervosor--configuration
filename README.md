@@ -12,13 +12,13 @@ If you don’t have root access, or you’d rather not put the supervisord.conf 
 
 For example, supervisord -c supervisord.conf. Using the -c flag actually is redundant in this case, because supervisord searches the current directory for a supervisord.conf before it searches any other locations for the file, but it will work. See Running Supervisor for more information about the -c flag.
 
-also uncomment  this section in supervisor.conf 
+also uncomment  this section in supervisor.conf and change it:
 
     [include]
-    files = relative/directory/*.ini
+    files = /etc/supervisor/conf.d/
     
     
-and make files with *.ini  in(relative/directory/) and put task in them.
+and make files with *.conf  in(relative/directory/) and put task in them.
 after taht 
 
     service supervisord restart

@@ -21,7 +21,7 @@ also uncomment  this section in supervisor.conf and change it:
 and make files with *.conf  in(relative/directory/) and put task in them.
 after taht 
 
-    service supervisord restart
+    service supervisor restart
 and 
 
      supervisorctl reread
